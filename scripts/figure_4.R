@@ -30,16 +30,8 @@ psGenusFilt
 psGenusClr <- microbiome::transform(psGenusFilt, "clr")
 psGenusClr
 
-#saveRDS(psGenusClr, 'ps.genus.clr.01112022.server.rds')
-
 # Clean up environment
 rm(psGenusFilt)
-
-#aitchDist <- phyloseq::distance(psGenusClr, "euclidean")
-
-#metaDat <- as(sample_data(psGenusClr), "data.frame")
-
-#perm <- vegan::adonis(aitchDist ~ FarmId + Batch + TechnicianId + Period + DIM, data = metaDat)
 
 # Subset samples from each farm into separate phyloseq objects and discard taxa with no counts
 farmA <- subset_samples(psGenusClr, FarmId == "Farm A"); farmA <- prune_taxa(taxa_sums(farmA) > 0, farmA)
@@ -67,7 +59,7 @@ eData <- as(sample_data(farmE), "data.frame")
 set.seed(84931)
 
 # Run PERMANOVA separately for each farm
-permAA <- vegan::adonis(aDist ~ DIM + Batch + TechnicianId, method = "euclidean", data = aData)
+permA <- vegan::adonis(aDist ~ DIM + Batch + TechnicianId, method = "euclidean", data = aData)
 permB <- vegan::adonis(bDist ~ DIM + Batch + TechnicianId, method = "euclidean", data = bData)
 permC <- vegan::adonis(cDist ~ DIM + Batch + TechnicianId, method = "euclidean", data = cData)
 permD <- vegan::adonis(dDist ~ DIM + Batch + TechnicianId, method = "euclidean", data = dData)
