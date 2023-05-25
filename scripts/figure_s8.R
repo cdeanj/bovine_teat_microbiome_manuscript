@@ -141,8 +141,7 @@ p2 <- ggplot(data=lml_melt, aes(x=Sample, y=Abundance, fill = Species)) +
   ylab("Relative Abundance")
 p2
 
-library(patchwork)
-figS8 <- p1 + p2 + plot_annotation(tag_levels = c("A"))
-figS8
+figure_S8 <- p1 + p2 + plot_annotation(tag_levels = c("A"))
+figure_S8
 
-ggsave("FigS8.png", figS8, width = 15, height = 6)
+ggsave("Figure_S8.png", figure_S8, width = 15, height = 6)
