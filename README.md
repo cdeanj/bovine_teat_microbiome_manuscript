@@ -13,4 +13,4 @@ The information provided in this repository is organized into a tree structure w
 The sequence data generated from this project can be found on the Sequence Read Archive, under BioProject accession [PRJNA975532](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA975532).
 
 ### Acknowledgements
-We would like to thank the National Instutute of Food and Agriculture for funding this research (grant no. 2018-51300-28563); the University of Minnesota Genomics Center for generating high-quality libraries and sequence data; the University of Minnesota Super Computing Institute for provided access to storage and computing resources; and the numerous, faculty, staff and farm managers that made this research possible.
+We would like to thank the National Instutute of Food and Agriculture for funding this research (grant no. 2018-51300-28563); the University of Minnesota Genomics Center for generating high-quality libraries and sequence data; the University of Minnesota Super Computing Institute for providing access to storage and computing resources; and the numerous, faculty, staff and farm managers that made this research possible.
